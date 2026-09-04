@@ -11,8 +11,8 @@ public class Main {
         Cliente c1 = new Cliente("Gustavo", "13385244617", "borg542@gmail.com");
         Cliente c2 = new Cliente("Lavínia", "67541312311", "lavinia21gmail.com");
 
-        ContaBancaria conta1 = new ContaBancaria(001, 7500.0, TipoConta.CORRENTE);
-        ContaBancaria conta2 = new ContaBancaria(002, 5500.0, TipoConta.CORRENTE);
+        ContaBancaria conta1 = new ContaBancaria(c1,001, 7500.0, TipoConta.CORRENTE);
+        ContaBancaria conta2 = new ContaBancaria(c2,002, 5500.0, TipoConta.CORRENTE);
 
         banco.addConta(conta1);
         banco.addConta(conta2);
@@ -22,9 +22,8 @@ public class Main {
         banco.depositar(conta2, 4000.0);
         banco.sacar(conta2, 400.0);
 
-
-        System.out.println(conta1);
-        System.out.println(conta2);
+        System.out.println(c1);
+        System.out.println(c2);
         System.out.println(banco);
 
     }

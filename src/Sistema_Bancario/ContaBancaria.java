@@ -3,11 +3,13 @@ package Sistema_Bancario;
 import java.time.LocalDateTime;
 
 public class ContaBancaria {
+    private Cliente cliente;
     private Integer id;
     private Double saldo;
     private TipoConta tipoConta;
 
-    public ContaBancaria(int id, double saldo, TipoConta tipoConta) {
+    public ContaBancaria(Cliente cliente, int id, double saldo, TipoConta tipoConta) {
+        this.cliente = cliente;
         this.id = id;
         this.saldo = saldo;
         this.tipoConta = tipoConta;
@@ -16,6 +18,8 @@ public class ContaBancaria {
     public Integer getId() {
         return id;
     }
+
+    public Cliente getCliente() { return cliente; }
 
     public Double getSaldo() {
         return saldo;
@@ -52,6 +56,6 @@ public class ContaBancaria {
 
     @Override
     public String toString() {
-        return "Id: " + getId() + " | Saldo: " + getSaldo() + " | Tipo da conta: " + getTipoConta();
+        return  "Titular: " + cliente.getNome() + " | Id: " + getId() + " | Saldo: " + getSaldo() + " | Tipo da conta: " + getTipoConta() + "\n";
     }
 }

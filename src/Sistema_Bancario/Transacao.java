@@ -33,6 +33,6 @@ public class Transacao {
 
     @Override
     public String toString() {
-        return "Tipo da transação: " + getTipoTransacao() + " | Valor: " + getValor() + " | Destino: " + getContaDestino() +" | Data e horario: " + getData();
+        return "Tipo da transação: " + getTipoTransacao() + " | Valor: " + getValor() + " | Destino: " + getContaDestino() +" | Data e horario: " + getData() + "\n";
     }
 }
